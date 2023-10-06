@@ -1,0 +1,48 @@
+/* Altere o fundo da tabela */
+table {
+    background-color: #f7f7f7;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  /* Estilize os cabeçalhos das colunas */
+  th {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+  }
+  
+  /* Estilize as células das colunas */
+  td {
+    padding: 10px;
+  }
+  
+  /* Adicione um estilo de hover para as linhas da tabela */
+  tr:hover {
+    background-color: #e0e0e0;
+  }
+  
+  /* Estilize os botões de ação */
+  .action-button {
+    padding: 5px 10px;
+    margin: 2px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Estilize os botões de ação individuais */
+  .action-button.show {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .action-button.edit {
+    background-color: #ffc107;
+    color: black;
+  }
+  
+  .action-button.delete {
+    background-color: #dc3545;
+    color: white;
+  }
+  

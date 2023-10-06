@@ -1,0 +1,39 @@
+<h1>Lista de Usuários</h1>
+
+<%= form_with(url: users_path, method: 'get', local: true) do |form| %>
+  <div class="input-group mb-3">
+    <%= form.text_field :search, placeholder: "Pesquisar por nome, email, telefone ou CPF", class: "form-control" %>
+    <div class="input-group-append">
+      <%= form.submit "Pesquisar", class: "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>
+
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Email</th>
+      <th>Telefone</th>
+      <th>CPF</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <td><%= user.phone %></td>
+        <td><%= user.cpf %></td>
+        <td>
+          <%= link_to 'Mostrar', user, class: 'action-button show' %>
+          <%= link_to 'Editar', edit_user_path(user), class: 'action-button edit' %>
+          <%= link_to 'Excluir', user, method: :delete, data: { confirm: 'Você tem certeza?' }, class: 'action-button delete' %>        
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'Novo Usuário', new_user_path, class: 'btn btn-success' %>
