@@ -1185,3 +1185,69 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.3ms | Allocations: 4295)
 
 
+Started GET "/users" for ::1 at 2023-10-06 19:41:40 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (name LIKE '%%' OR email LIKE '%%' OR phone LIKE '%%' OR cpf LIKE '%%')[0m
+  ↳ app/views/users/index.html.erb:23
+  Rendered users/index.html.erb within layouts/application (Duration: 45.9ms | Allocations: 101708)
+  Rendered layout layouts/application.html.erb (Duration: 70.5ms | Allocations: 140283)
+Completed 200 OK in 88ms (Views: 72.5ms | ActiveRecord: 0.2ms | Allocations: 159214)
+
+
+Started GET "/users/new" for ::1 at 2023-10-06 19:41:41 -0300
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 8.0ms | Allocations: 2685)
+  Rendered users/new.html.erb within layouts/application (Duration: 10.4ms | Allocations: 3064)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 5205)
+Completed 200 OK in 18ms (Views: 15.7ms | ActiveRecord: 0.0ms | Allocations: 5725)
+
+
+Started POST "/users" for ::1 at 2023-10-06 19:41:45 -0300
+Processing by UsersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"", "email"=>"", "phone"=>"", "cpf"=>"1111111111"}, "commit"=>"Create User"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 6.6ms | Allocations: 4544)
+  Rendered users/new.html.erb within layouts/application (Duration: 6.8ms | Allocations: 4637)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 6816)
+Completed 422 Unprocessable Entity in 14ms (Views: 10.6ms | ActiveRecord: 0.0ms | Allocations: 8646)
+
+
+Started POST "/users" for ::1 at 2023-10-06 19:41:58 -0300
+Processing by UsersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"", "email"=>"", "phone"=>"8188702652", "cpf"=>"1111111111"}, "commit"=>"Create User"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 5.7ms | Allocations: 3520)
+  Rendered users/new.html.erb within layouts/application (Duration: 6.1ms | Allocations: 3605)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 5676)
+Completed 422 Unprocessable Entity in 14ms (Views: 11.4ms | ActiveRecord: 0.0ms | Allocations: 6899)
+
+
+Started POST "/users" for ::1 at 2023-10-06 19:42:00 -0300
+Processing by UsersController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"", "email"=>"", "phone"=>"8188702652", "cpf"=>"1111111111"}, "commit"=>"Create User"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 6.5ms | Allocations: 3520)
+  Rendered users/new.html.erb within layouts/application (Duration: 6.9ms | Allocations: 3605)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 5676)
+Completed 422 Unprocessable Entity in 15ms (Views: 12.9ms | ActiveRecord: 0.0ms | Allocations: 6889)
+
+
+Started GET "/users" for ::1 at 2023-10-06 19:42:02 -0300
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (name LIKE '%%' OR email LIKE '%%' OR phone LIKE '%%' OR cpf LIKE '%%')[0m
+  ↳ app/views/users/index.html.erb:23
+  Rendered users/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1619)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 3829)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.2ms | Allocations: 4224)
+
+
