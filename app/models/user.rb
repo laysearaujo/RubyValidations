@@ -2,8 +2,12 @@ class User < ApplicationRecord
   validates :name, presence: true
   validates :email, presence: true, format: { with: /\A[^@\s]+@[^@\s]+\z/, message: "Formato de email inválido" }
   validate :valid_cpf
-  validates :phone, presence: true, format: { with: /\A\(?\d{2}\)?\s?\d{5}[-\s]?\d{4}\z/, message: "Formato de celular inválido (exemplo válido: (99) 12345-6789)" }
+  validates :phone, presence: true, format: { with: /\A\(?\d{2}\)?\s?\d{5}[-\s]?\d{4}\z/, message: "Formato de celular inválido (exemplo válido: (99)12345-6789)" }
 
+  def formatted_phone
+    phone.gsub(/(\d{2})(\d{5})(\d{4})/, '(\1)\2-\3')
+  end
+  
   private
 
   def valid_cpf
