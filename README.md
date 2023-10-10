@@ -10,9 +10,9 @@ To get started with this project, follow these simple steps:
 
 Make sure you have the following software installed on your system:
 
-- Ruby (version X.X.X)
-- Ruby on Rails (version X.X.X)
-- A compatible database (e.g., PostgreSQL)
+- Ruby
+- Ruby on Rails
+- A compatible database
 
 ### Installation
 
